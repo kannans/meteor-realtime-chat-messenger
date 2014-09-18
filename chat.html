@@ -1,0 +1,30 @@
+<head>
+  <title>My Page</title>
+</head>
+
+<body>
+{{> entryfield}}
+
+{{> messages}}
+
+
+</body>
+
+<template name="entryfield">
+    <input type="text" id="name" placeholder="Name" />
+    	<br>
+    <input type="text" id="message" placeholder="Your Message" />
+</template>
+
+
+<template name="messages">
+    <p>
+        {{#each messages}}
+            <h2>{{name}}</h2>- {{message}}
+            <hr>
+        {{/each}}
+    </p>
+
+</template>
+
+
